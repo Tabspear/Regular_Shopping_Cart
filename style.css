@@ -1,0 +1,36 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #f0ece2;
+    margin: 0px;
+}
+
+.container {
+    width: 1200px;
+    text-align: center;
+    margin: 0px auto;
+}
+
+.clearfloat {
+    clear: both;
+}
+
+/* Misael's CSS */
+img {
+    width: 250px;
+    height: auto;
+    margin: 5px;
+}
+
+.row1 {
+    display: flex;
+    justify-content: center;
+}
+
+.row2 {
+    display: flex;
+    justify-content: center;
+}
+
+.mb-h4 {
+    text-align: center;
+}
