@@ -7,8 +7,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script  src="./js/main.js"></script>
 	
-	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="./css/style.css">
 	<title>Shopping Cart</title>
 </head>
 
@@ -21,19 +22,19 @@
 	<div id="container">
 		<div class ="row1">
 			<div class="col1">
-				<img src="/img/hamster1.jpg" id ="hamster1" alt="image">
+				<img src="./img/hamster1.jpg" id ="hamster1" alt="image">
 				<h4 class= "mb-h4">Cost: $<span id="ham1">10</span></h4>
 			</div>
 			<div class="col1">
-				<img src="/img/hamster2.webp" id ="hamster2" alt="image">
+				<img src="./img/hamster2.webp" id ="hamster2" alt="image">
 				<h4 class= "mb-h4">Cost: $<span id="ham2">25</span></h4>
 			</div>
 			<div class="col1">
-				<img src="/img/hamster3.jpg" id ="hamster3" alt="image">
+				<img src="./img/hamster3.jpg" id ="hamster3" alt="image">
 				<h4 class= "mb-h4">Cost: $<span id="ham3">42</span></h4>
 			</div>
 			<div class="col1">
-				<img src="/img/hamster4.jpg" id ="hamster4" alt="image">
+				<img src="./img/hamster4.jpg" id ="hamster4" alt="image">
 				<h4 class= "mb-h4">Cost: $<span id="ham4">2</span></h4>
 			</div>
 		<div class="clearfloat"></div>
@@ -41,19 +42,19 @@
 
 		<div class ="row2">
 			<div class="col1">
-				<img src="/img/hamster5.jpg" id ="hamster5" alt="image">
+				<img src="./img/hamster5.jpg" id ="hamster5" alt="image">
 				<h4 class= "mb-h4">Cost: $<span id="ham5">1</span></h4>
 			</div>
 			<div class="col1">
-				<img src="/img/hamster6.jpg" id ="hamster6" alt="image">
+				<img src="./img/hamster6.jpg" id ="hamster6" alt="image">
 				<h4 class= "mb-h4">Cost: $<span id="ham6">205</span></h4>
 			</div>
 			<div class="col1">
-				<img src="/img/hamster7.jpg" id ="hamster7" alt="image">
+				<img src="./img/hamster7.jpg" id ="hamster7" alt="image">
 				<h4 class= "mb-h4">Cost: $<span id="ham7">96</span></h4>
 			</div>
 			<div class="col1">
-				<img src="/img/hamster8.jpg" id ="hamster8" alt="image">
+				<img src="./img/hamster8.jpg" id ="hamster8" alt="image">
 				<h4 class= "mb-h4">Cost: $<span id="ham8">9000</span></h4>
 			</div>
 		<div class="clearfloat"></div>
@@ -80,12 +81,60 @@
 			4. Save the current subtotal
 			5. Increment by price of next plant selected
 		*/
+	// This are the declarations for the first subtotal
+	// let hamster1 = 10;
+	
+	// const hamster2 = 25;
+	// const hamster3 = 42;
+	// const hamster4 = 2;
+	// const hamster5 = 1;
+	// const hamster6 = 205;
+	// const hamster7 = 96;
+	// const hamster8 = 9000;
 
-		
-
+	let subtotal = 0;
+	let cost = 0;
 		//Click = Money
-		
+		document.querySelector('#hamster1').onclick= function () {
+			cartSubtotal( Number(document.getElementById('ham1').innerHTML))
+
+		}
+		document.querySelector('#hamster2').onclick= function () {
+			cartSubtotal( Number(document.getElementById('ham2').innerHTML))
+
+		}
+		document.querySelector('#hamster3').onclick= function () {
+			cartSubtotal( Number(document.getElementById('ham3').innerHTML))
+
+		}
+		document.querySelector('#hamster4').onclick= function () {
+			cartSubtotal( Number(document.getElementById('ham4').innerHTML))
+
+		}
+		document.querySelector('#hamster5').onclick= function () {
+			cartSubtotal( Number(document.getElementById('ham5').innerHTML))
+
+		}
+		document.querySelector('#hamster6').onclick= function () {
+			cartSubtotal( Number(document.getElementById('ham6').innerHTML))
+
+		}
+		document.querySelector('#hamster7').onclick= function () {
+			cartSubtotal( Number(document.getElementById('ham7').innerHTML))
+
+		}
+		document.querySelector('#hamster8').onclick= function () {
+			cartSubtotal( Number(document.getElementById('ham').innerHTML))
+
+		}
+		function cartSubtotal(cost){ 
+			console.log(cost)
+			subtotal += cost
+			document.querySelector('#cost').innerHTML= subtotal
+		}
+		console.log(hamster1)
 	</script>
+	
 
 	<!-- Optional JavaScript; choose one of the two! -->
 
@@ -97,6 +146,10 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
+	<!-- step one 
+	onclick of the image the id of the cost should equal to the cart subtotal  -->
+	<!-- step two -->
+	<!-- when the image is doubleclicked it should add to the main session -->
 </body>
 
 </html>
